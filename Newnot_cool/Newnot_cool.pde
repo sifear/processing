@@ -47,21 +47,11 @@ float[][] elapse(float T1[][], float t){
           
           float a = 1 * exp(-t) + AMB;
           Tout[i][j] += a;
-          
-          T1[i][j-1] += a/4;
-          T1[i][j+1] += a/4;
-          T1[i+1][j] += a/4;
-          T1[i-1][j] += a/4;
         }
         // Rect cooler than neighbours
         else{
           float a = 1 * exp(t) + AMB;
           Tout[i][j] += a;
-          
-          T1[i][j-1] -= a/4;
-          T1[i][j+1] -= a/4;
-          T1[i+1][j] -= a/4;
-          T1[i-1][j] -= a/4;
         }
       }
   }
